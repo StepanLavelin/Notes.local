@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Экран авторизованного пользователя с его персональными задачами-->
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/group12">
+
+    <!--кнопка создать задачу -->
+
+    <ImageView
+        android:id="@+id/textViewName"
+        android:layout_width="330dp"
+        android:layout_height="228dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/piple"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center"
+        android:text="@string/Tasks"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/spisok"
+        android:layout_width="394dp"
+        android:layout_height="203dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listCases"
+            android:layout_width="355dp"
+            android:layout_height="193dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="5dp"
+            android:contextClickable="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.592"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/addbutton"
+        style="@style/Botton1"
+        android:layout_width="355dp"
+        android:layout_height="84dp"
+        android:layout_below="@id/spisok"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/new_task"
+        android:gravity="center"
+        android:onClick="startActivity4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Botton1"
+        android:layout_width="165dp"
+        android:layout_height="73dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/done"
+        app:layout_constraintBottom_toTopOf="@+id/addbutton"
+        app:layout_constraintStart_toStartOf="@+id/addbutton"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Botton1"
+        android:layout_width="165dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/not_done"
+        app:layout_constraintBottom_toTopOf="@+id/addbutton"
+        app:layout_constraintEnd_toEndOf="@+id/addbutton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

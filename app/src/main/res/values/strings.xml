@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Заметки</string>
+    <string name="create_a_task">Создать задачу</string>
+    <string name="Name_task"><font size="20">Название задачи</font></string>
+    <string name="Name_task_text"><font size="20">Текст задачи</font></string>
+    <string name="Name_save_task">Сохранить задачу</string>
+    <string name="completed">Выполнено</string>
+    <string name="Tasks">Задачи</string>
+
+
+</resources>
